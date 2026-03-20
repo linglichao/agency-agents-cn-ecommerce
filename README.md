@@ -704,6 +704,9 @@ cd /your/project
 | 项目 | 说明 |
 |------|------|
 | [superpowers-zh](https://github.com/jnMetaCode/superpowers-zh) | AI 编程超能力 · 中文版 — 17 个 skills，让你的 AI 编程助手真正会干活 |
+| [awesome-claude-md](https://github.com/jnMetaCode/awesome-claude-md) | CLAUDE.md 最佳实践集合 |
+| [ai-coding-101](https://github.com/jnMetaCode/ai-coding-101) | AI 编程从入门到精通 |
+| [ai-ui-design](https://github.com/jnMetaCode/ai-ui-design) | AI 驱动的 UI 设计指南 |
 
 ---
 
