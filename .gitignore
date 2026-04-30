@@ -2,4 +2,5 @@
 integrations/
 .codex/
 .claude/
+.feishu-opencode-usage.md
 openspec/.DS_Store
