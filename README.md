@@ -4,16 +4,6 @@
 
 本仓库基于 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) 和 [jnMetaCode/agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) 做了定向裁剪，不再追求“大而全”，而是只保留适合中国电商业务直接落地的角色。
 
-## 许可与署名
-
-- 本仓库延续上游项目的 `MIT License`
-- 保留了上游 `LICENSE` 文件中的版权与许可声明
-- 当前仓库属于二次修改版本，主要工作是中国国内电商场景裁剪、角色收口和安装流程优化
-- 上游来源：
-  - 原始英文项目：[`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents)
-  - 中文翻译与本地化项目：[`jnMetaCode/agency-agents-zh`](https://github.com/jnMetaCode/agency-agents-zh)
-- 如果你继续基于本仓库二次分发，也应保留 `LICENSE` 和来源说明
-
 ## 这次收口后的定位
 
 - 保留 `50` 个角色，覆盖 `10` 个国内电商高频部门
@@ -160,8 +150,11 @@
 - 当前转换与安装脚本已经只面向本仓库保留的电商角色集
 - 如果后续你还想继续收窄，比如只做“直播电商版”或“天猫旗舰店版”，可以再按部门继续拆分
 
-## 来源说明
+## 来源与许可说明
 
 - 上游主项目：[`msitarzewski/agency-agents`](https://github.com/msitarzewski/agency-agents)
 - 中文化基础：[`jnMetaCode/agency-agents-zh`](https://github.com/jnMetaCode/agency-agents-zh)
 - 当前仓库：在中文化版本基础上做中国电商专属裁剪
+- 本仓库延续上游项目的 `MIT License`
+- 保留了上游 `LICENSE` 文件中的版权与许可声明
+- 如果你继续基于本仓库二次分发，也应保留 `LICENSE` 和来源说明
