@@ -140,9 +140,8 @@ function Install-ClaudeCode {
     $dest = Join-Path $Home_ ".claude\agents"
     New-Item -ItemType Directory -Force -Path $dest | Out-Null
     $count = 0
-    foreach ($dir in @("academic","design","engineering","finance","game-development","hr","legal",
-                        "marketing","paid-media","sales","product","project-management",
-                        "supply-chain","testing","support","spatial-computing","specialized")) {
+    foreach ($dir in @("design","engineering","marketing","paid-media","product","project-management",
+                        "supply-chain","testing","support","specialized")) {
         $dirPath = Join-Path $RepoRoot $dir
         if (-not (Test-Path $dirPath)) { continue }
         Get-ChildItem -Path $dirPath -Filter "*.md" -Recurse | ForEach-Object {
@@ -159,9 +158,8 @@ function Install-Copilot {
     New-Item -ItemType Directory -Force -Path $dest1 | Out-Null
     New-Item -ItemType Directory -Force -Path $dest2 | Out-Null
     $count = 0
-    foreach ($dir in @("academic","design","engineering","finance","game-development","hr","legal",
-                        "marketing","paid-media","sales","product","project-management",
-                        "supply-chain","testing","support","spatial-computing","specialized")) {
+    foreach ($dir in @("design","engineering","marketing","paid-media","product","project-management",
+                        "supply-chain","testing","support","specialized")) {
         $dirPath = Join-Path $RepoRoot $dir
         if (-not (Test-Path $dirPath)) { continue }
         Get-ChildItem -Path $dirPath -Filter "*.md" -Recurse | ForEach-Object {
@@ -431,7 +429,7 @@ if ($Tool -ne "all") {
     }
     $selectedTools = @($Tool)
 } else {
-    Write-Header "AI 智能体专家团队 -- 扫描已安装的工具..."
+    Write-Header "中国电商 AI 角色库 -- 扫描已安装的工具..."
     Write-Host ""
     foreach ($t in $AllTools) {
         if (Detect-Tool $t) {
@@ -451,7 +449,7 @@ if ($selectedTools.Count -eq 0) {
 }
 
 Write-Host ""
-Write-Header "AI 智能体专家团队 -- 安装智能体"
+Write-Header "中国电商 AI 角色库 -- 安装智能体"
 Write-Host "  仓库:     $RepoRoot"
 Write-Host "  安装到:   $($selectedTools -join ', ')"
 Write-Host ""

@@ -39,9 +39,8 @@ $OutDir    = if ($Out) { $Out } else { Join-Path $RepoRoot "integrations" }
 $Today     = Get-Date -Format "yyyy-MM-dd"
 
 $AgentDirs = @(
-    "academic","design","engineering","finance","game-development","hr","legal",
-    "marketing","paid-media","sales","product","project-management",
-    "supply-chain","testing","support","spatial-computing","specialized"
+    "design","engineering","marketing","paid-media","product",
+    "project-management","supply-chain","testing","support","specialized"
 )
 
 $ValidTools = @("antigravity","gemini-cli","opencode","cursor","trae","aider",
@@ -355,8 +354,8 @@ function Convert-Kiro {
 }
 
 # --- Aider / Windsurf 累积 ---
-$AiderContent    = "# AI 智能体专家团队 — Aider 约定文件`n# 由 scripts/convert.ps1 生成`n"
-$WindsurfContent = "# AI 智能体专家团队 — Windsurf 规则文件`n# 由 scripts/convert.ps1 生成`n"
+$AiderContent    = "# 中国电商 AI 角色库 — Aider 约定文件`n# 由 scripts/convert.ps1 生成`n"
+$WindsurfContent = "# 中国电商 AI 角色库 — Windsurf 规则文件`n# 由 scripts/convert.ps1 生成`n"
 
 function Accumulate-Aider {
     param([string]$File, [string[]]$Lines)
@@ -413,7 +412,7 @@ if ($Tool -notin $ValidTools) {
     exit 1
 }
 
-Write-Header "AI 智能体专家团队 -- 转换为工具专用格式"
+Write-Header "中国电商 AI 角色库 -- 转换为工具专用格式"
 Write-Host "  仓库:   $RepoRoot"
 Write-Host "  输出:   $OutDir"
 Write-Host "  工具:   $Tool"

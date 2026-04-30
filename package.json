@@ -1,7 +1,7 @@
 {
-  "name": "agency-agents-zh",
-  "version": "1.1.0",
-  "description": "211 个即插即用的 AI 专家角色定义 — 从前端开发到区块链安全，从小红书运营到抖音策略",
+  "name": "agency-agents-ecommerce",
+  "version": "2.0.0",
+  "description": "中国国内电商团队专属的 50 个 AI 角色定义，覆盖平台运营、投放、供应链、客服、产品与电商技术",
   "keywords": [
     "ai-agents",
     "prompts",
@@ -22,21 +22,13 @@
     "url": "https://github.com/jnMetaCode/agency-agents-zh"
   },
   "files": [
-    "academic/",
     "design/",
     "engineering/",
-    "finance/",
-    "game-development/",
-    "hr/",
-    "legal/",
     "marketing/",
     "paid-media/",
     "product/",
     "project-management/",
-    "sales/",
-    "spatial-computing/",
     "specialized/",
-    "strategy/",
     "supply-chain/",
     "support/",
     "testing/",

@@ -21,13 +21,13 @@ color: red
 - 制定隐私政策和数据处理流程，包含同意管理和用户权利实现
 - 创建内容合规框架，确保营销标准和广告法规的遵守
 - 建立合同审查流程，涵盖服务条款、隐私政策和供应商协议分析
-- **默认要求**：在所有流程中包含多司法管辖区合规验证和审计追踪文档
+- **默认要求**：在所有流程中包含平台规则、个人信息保护和审计追踪文档
 
 ### 管理法律风险和责任
 - 进行全面风险评估，包含影响分析和缓解策略制定
 - 创建政策制定框架，配合培训计划和实施监控
 - 建立审计准备系统，包含文档管理和合规验证
-- 实施国际合规策略，包含跨境数据传输和本地化要求
+- 实施国内数据合规策略，包含第三方共享、委外处理和本地留存要求
 
 ### 建立合规文化和培训
 - 设计合规培训计划，包含角色特定教育和效果评估
@@ -155,7 +155,7 @@ class PrivacyPolicyGenerator:
             'user_rights': self.generate_user_rights_section(),
             'security': self.generate_security_section(),
             'cookies': self.generate_cookies_section(),
-            'international_transfers': self.generate_transfers_section(),
+            'third_party_processing': self.generate_transfers_section(),
             'policy_updates': self.generate_updates_section(),
             'contact': self.generate_contact_section()
         }
@@ -357,13 +357,13 @@ class ContractReviewSystem:
                 'action': '验证安全控制措施符合 SOC2 标准'
             })
 
-        # 检查国际条款
-        if any(term in contract_text.lower() for term in ['international', 'cross-border', 'global']):
+        # 检查敏感数据与异地履约条款
+        if any(term in contract_text.lower() for term in ['biometric', 'location', 'outsourcing', 'third party']):
             compliance_findings.append({
-                'area': '国际合规',
-                'requirement': '多司法管辖区合规审查',
+                'area': '数据与外包合规',
+                'requirement': '需要补充隐私与委外处理合规审查',
                 'risk_level': '高',
-                'action': '审查当地法律要求和数据驻留规定'
+                'action': '审查个人信息处理边界、委外责任划分和平台合规义务'
             })
 
         return compliance_findings

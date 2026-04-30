@@ -1,39 +1,28 @@
 # 上游版本追踪
 
-记录本项目对应的上游 [agency-agents](https://github.com/msitarzewski/agency-agents) 版本，方便同步更新。
+记录当前电商裁剪版的来源，方便后续继续同步或做进一步定制。
 
-## 当前基线
+## 当前来源链路
 
-- **上游仓库**: https://github.com/msitarzewski/agency-agents
-- **对应 commit**: `783f6a7` (2026-04-11)
-- **上游智能体总数**: 184
+- 原始英文项目：https://github.com/msitarzewski/agency-agents
+- 中文翻译与本地化基线：https://github.com/jnMetaCode/agency-agents-zh
+- 当前仓库定位：在中文化版本基础上裁剪为中国国内电商专用角色库
 
-## 翻译覆盖
+## 当前本地基线
 
-| 分类 | 上游数量 | 已翻译 | 覆盖率 |
-|------|----------|--------|--------|
-| design | 7 | 7 | 100% |
-| engineering | 8 | 8 | 100% |
-| marketing | 11 | 11 | 100% |
-| product | 3 | 3 | 100% |
-| project-management | 5 | 5 | 100% |
-| spatial-computing | 6 | 6 | 100% |
-| specialized | 7 | 7 | 100% |
-| strategy | 16 | 16 | 100% |
-| support | 6 | 6 | 100% |
-| testing | 8 | 8 | 100% |
+- 英文上游参考分支：`msitarzewski/agency-agents@main`
+- 中文基线参考仓库：`jnMetaCode/agency-agents-zh@main`
+- 当前保留角色数：`50`
+- 当前保留部门数：`10`
 
-## 中国市场原创智能体
+## 当前裁剪原则
 
-这些不是翻译，是针对中国市场单独做的：
+- 仅保留中国国内电商高频工作流相关角色
+- 优先保留运营、内容、投放、供应链、客服、产品、测试、数据和电商技术相关角色
+- 删除与当前目标无关的学术、游戏、销售、空间计算、HR 等大类角色
 
-- `marketing/marketing-xiaohongshu-operator.md` — 小红书运营
-- `marketing/marketing-douyin-strategist.md` — 抖音策略师
-- `marketing/marketing-wechat-operator.md` — 微信公众号运营
-- `specialized/prompt-engineer.md` — Prompt 工程师
+## 同步建议
 
-## 同步说明
-
-- 跟踪上游 `main` 分支
-- 新增的上游智能体会逐步翻译
-- 上游如果有大的结构调整（目录重命名等），一周内同步
+- 如果上游后续出现更适合电商的新角色，可择优回收
+- 如果只是面向运营安装使用，不建议频繁追上游，以免角色重新膨胀
+- 如需继续细分，可在当前版本上再拆出“店播版”“内容版”“运营一线版”

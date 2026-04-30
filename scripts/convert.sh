@@ -49,8 +49,8 @@ OUT_DIR="$REPO_ROOT/integrations"
 TODAY="$(date +%Y-%m-%d)"
 
 AGENT_DIRS=(
-  academic design engineering finance game-development hr legal marketing paid-media sales product
-  project-management supply-chain testing support spatial-computing specialized
+  design engineering marketing paid-media product project-management
+  specialized supply-chain support testing
 )
 
 # --- 用法 ---
@@ -506,9 +506,9 @@ WINDSURF_TMP="$(mktemp)"
 trap 'rm -f "$AIDER_TMP" "$WINDSURF_TMP"' EXIT
 
 cat > "$AIDER_TMP" <<'HEREDOC'
-# AI 智能体专家团队 — Aider 约定文件
+# 中国电商 AI 角色库 — Aider 约定文件
 #
-# 本文件为 Aider 提供完整的 AI 智能体专家阵容。
+# 本文件为 Aider 提供当前电商专用角色集。
 # 来源：https://github.com/jnMetaCode/agency-agents-zh
 #
 # 激活方式：在 Aider 会话中引用智能体名称，例如：
@@ -519,9 +519,9 @@ cat > "$AIDER_TMP" <<'HEREDOC'
 HEREDOC
 
 cat > "$WINDSURF_TMP" <<'HEREDOC'
-# AI 智能体专家团队 — Windsurf 规则文件
+# 中国电商 AI 角色库 — Windsurf 规则文件
 #
-# 完整的 AI 智能体专家阵容。
+# 当前电商专用角色集。
 # 激活方式：在 Windsurf 对话中引用智能体名称。
 #
 # 由 scripts/convert.sh 生成 — 请勿手动编辑。
@@ -634,7 +634,7 @@ main() {
     exit 1
   fi
 
-  header "AI 智能体专家团队 -- 转换为工具专用格式"
+  header "中国电商 AI 角色库 -- 转换为工具专用格式"
   echo "  仓库:   $REPO_ROOT"
   echo "  输出:   $OUT_DIR"
   echo "  工具:   $tool"

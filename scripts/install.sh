@@ -141,8 +141,8 @@ install_claude_code() {
   local count=0
   mkdir -p "$dest"
   local dir f first_line
-  for dir in academic design engineering finance game-development hr legal marketing paid-media sales product \
-              project-management supply-chain testing support spatial-computing specialized; do
+  for dir in design engineering marketing paid-media product \
+              project-management supply-chain testing support specialized; do
     [[ -d "$REPO_ROOT/$dir" ]] || continue
     while IFS= read -r -d '' f; do
       first_line="$(head -1 "$f")"
@@ -160,8 +160,8 @@ install_copilot() {
   local count=0
   mkdir -p "$dest1" "$dest2"
   local dir f first_line
-  for dir in academic design engineering finance game-development hr legal marketing paid-media sales product \
-              project-management supply-chain testing support spatial-computing specialized; do
+  for dir in design engineering marketing paid-media product \
+              project-management supply-chain testing support specialized; do
     [[ -d "$REPO_ROOT/$dir" ]] || continue
     while IFS= read -r -d '' f; do
       first_line="$(head -1 "$f")"
@@ -525,7 +525,7 @@ main() {
   if [[ "$tool" != "all" ]]; then
     SELECTED_TOOLS=("$tool")
   else
-    header "AI 智能体专家团队 -- 扫描已安装的工具..."
+    header "中国电商 AI 角色库 -- 扫描已安装的工具..."
     printf "\n"
     local t
     for t in "${ALL_TOOLS[@]}"; do
@@ -547,7 +547,7 @@ main() {
   fi
 
   printf "\n"
-  header "AI 智能体专家团队 -- 安装智能体"
+  header "中国电商 AI 角色库 -- 安装智能体"
   printf "  仓库:     %s\n" "$REPO_ROOT"
   printf "  安装到:   %s\n" "${SELECTED_TOOLS[*]}"
   printf "\n"
